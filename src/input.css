@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+.header {
+  height: 400px;
+}
+.movie-card-container {
+  @apply flex flex-shrink-0;
+}
+.movie-card-link {
+  @apply relative  block mx-2;
+}
+.movie-card-content {
+  @apply absolute inset-0 bg-black opacity-75 p-4 hidden  flex-col justify-end text-white;
+}
+.movie-card-title {
+  @apply text-lg mb-2;
+}
+.movie-card-text {
+  @apply leading-normal select-none;
+}
+.trailer {
+  @apply h-[300px];
+}
+.btn-primary {
+  @apply bg-transparent uppercase border border-orange-600 text-orange-600 px-10 py-3 inline-block;
+}
+.btn-primary:hover {
+  @apply bg-orange-600 text-white;
+}
+.icon-list {
+  @apply w-4 h-4 mx-3 opacity-50 fill-current text-white hover:opacity-75;
+}
+@screen md {
+  .header {
+    height: 650px;
+  }
+  .trailer {
+    height: 600px;
+  }
+}
+@tailwind utilities;
